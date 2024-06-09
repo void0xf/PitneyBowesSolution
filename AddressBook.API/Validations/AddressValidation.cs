@@ -38,7 +38,9 @@ public static class AddressValidation
         }
         if (!PhoneRegex.IsMatch(addressBook.Phone))
         {
-            errorMessages.Add("Phone number is not valid.");
+            errorMessages.Add(
+                "Phone number is not valid. Example of good number pattern +48505505050"
+            );
         }
 
         if (errorMessages.Count > 0)
