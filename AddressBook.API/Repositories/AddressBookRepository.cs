@@ -85,4 +85,20 @@ public class AddressBookRepository : IAddressBookRepository
 
         return Result<bool>.Success(true);
     }
+
+    public Result<IEnumerable<AddressBookModel>> GetByCity(string city)
+    {
+        var results = _addressBooks.Where(ab => ab.City == city);
+        return Result<IEnumerable<AddressBookModel>>.Success(results);
+    }
+
+    public Result<AddressBookModel> GetLastAdded()
+    {
+        var result = _addressBooks.LastOrDefault();
+        if (result == null)
+        {
+            return Result<AddressBookModel>.Failure(new List<string> { "AddressBook is empty" });
+        }
+        return Result<AddressBookModel>.Success(result);
+    }
 }

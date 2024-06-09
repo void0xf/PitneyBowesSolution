@@ -7,7 +7,9 @@ public interface IAddressBookRepository
 {
     Result<IEnumerable<AddressBookModel>> GetAllAddressBooks();
     Result<AddressBookModel> GetAddressBook(Guid id);
+    Result<AddressBookModel> GetLastAdded();
     Result<bool> UpdateAddressBook(Guid id, AddressBookModel addressBook);
     Result<AddressBookModel> AddAddressBook(AddressBookModel addressBook);
     Result<bool> RemoveAddressBook(Guid id);
+    Result<IEnumerable<AddressBookModel>> GetByCity(string city);
 }

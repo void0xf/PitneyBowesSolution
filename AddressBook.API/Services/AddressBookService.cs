@@ -58,4 +58,14 @@ public class AddressBookService : IAddressBookService
 
         return _repository.UpdateAddressBook(id, addressBook);
     }
+
+    public Result<IEnumerable<AddressBookModel>> GetByCity(string city)
+    {
+        return _repository.GetByCity(city);
+    }
+
+    public Result<AddressBookModel> GetLastAdded()
+    {
+        return _repository.GetLastAdded();
+    }
 }
