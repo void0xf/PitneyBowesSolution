@@ -1,6 +1,6 @@
 ﻿namespace AddressBook.API.Models;
 
-public class AddressBook
+public class AddressBookModel
 {
     public Guid Id { get; set; }
     public DateTime LastModified { get; set; }

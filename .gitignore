@@ -3,3 +3,6 @@
 /AddressBook.API/bin
 /AddressBook.API/obj
 /AddressBook.Contracts/obj
+/AddressBoo.Tests/bin
+/AddressBoo.Tests/obj
+/AddressBook.Contracts/bin
