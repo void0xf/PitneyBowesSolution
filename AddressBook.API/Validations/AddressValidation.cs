@@ -1,10 +1,13 @@
 ﻿using AddressBook.API.Models;
 using AddressBook.API.Result;
+using System.Text.RegularExpressions;
 
 namespace AddressBook.API.Validations;
 
 public static class AddressValidation
 {
+    private static readonly Regex PhoneRegex = new Regex(@"^\+?\d{10,15}$");
+
     public static Result<bool> ValidateAddress(AddressBookModel addressBook)
     {
         var errorMessages = new List<string>();
@@ -32,6 +35,10 @@ public static class AddressValidation
         if (string.IsNullOrEmpty(addressBook.State))
         {
             errorMessages.Add("State cannot be empty.");
+        }
+        if (!PhoneRegex.IsMatch(addressBook.Phone))
+        {
+            errorMessages.Add("Phone number is not valid.");
         }
 
         if (errorMessages.Count > 0)

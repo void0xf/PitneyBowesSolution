@@ -72,8 +72,8 @@ public class AddressBookController : ControllerBase
         }
 
         return Problem(
-            detail: result.ProblemDetails.Detail,
-            statusCode: result.ProblemDetails.Status
+            detail: string.Join("; ", result.ErrorMessages),
+            statusCode: result.ProblemDetails.Status,
         );
     }
 }
