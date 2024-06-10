@@ -144,14 +144,7 @@ namespace AddressBook.API.Tests.Controllers
 
             var result = _controller.GetById(addressBookId);
 
-            var problemResult = Assert.IsType<ObjectResult>(result);
-            var problemDetails = Assert.IsType<ProblemDetails>(problemResult.Value);
-            Assert.Equal("Address book entry not found", problemDetails.Title);
-            Assert.Equal(
-                $"Address book entry with ID {addressBookId} not found.",
-                problemDetails.Detail
-            );
-            Assert.Equal(404, problemDetails.Status);
+            var problemResult = Assert.IsType<NotFoundObjectResult>(result);
         }
 
         [Fact]

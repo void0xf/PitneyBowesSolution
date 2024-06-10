@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.API", "AddressB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Contracts", "..\AddressBook.Contracts\AddressBook.Contracts.csproj", "{CC5C6A4B-16F5-4A0C-9EE4-CAEC24C89D69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBoo.Tests", "..\AddressBoo.Tests\AddressBoo.Tests.csproj", "{1BAE2110-30C1-412B-AF96-3E1C794CDF62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Tests", "..\AddressBoo.Tests\AddressBook.Tests.csproj", "{1BAE2110-30C1-412B-AF96-3E1C794CDF62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
